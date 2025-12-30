@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="port.css">
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins' sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 35px 12%;
+    background-color: #363636;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    font-size: 25px;
+    color: rgb(253, 253, 253);
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+.logo:hover{
+    color: #ff4500;
+    text-shadow: 0 0 25px rgb(127, 255, 234) ,
+                 0 0 25px rgb(115, 243, 200);
+    transform: scale(1.1);
+
+}
+span{
+    color: #00ffff;
+}
+.navbar a{
+    font-size: 20px;
+    color: white;
+    font-weight: 500;
+    margin: 0 20px;
+    border-bottom: 3px solid transparent;
+    transition: 0,3s ease;
+}
+.navbar a:hover ,
+.navbar a.active{
+    background-color: rgb(236, 73, 8);
+    border-bottom: 3px solid orangered;
+}
+.contact{
+    padding: 10px 28px;
+    background-color: white;
+    color: black;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+.contact:hover{
+    background-color: #ff4500;
+    box-shadow: 0 0 25px orangered;
+    color: white;
+}
+.home{
+    width: 100;
+    min-height: 100vh;
+    background-color: rgb(241,241,241);
+    display: flex;
+    align-items: center;
+    gap: 7em;
+    padding: 30px 12% 0;
+}
+.home-content{
+    max-width: 800px;
+}
+.home-content h3{
+    font-size: 42px;
+
+}
+.home-content h1{
+    font-size: 62px;
+    line-height: 1.2;
+}
+.home-content p{
+    font-size: 18px;
+    margin:  25px 0 30px;
+}
+.btn-box{
+    width: 345px;
+    display: flex;
+    gap: 2em;
+}
+.btn1{
+  padding:15px 28px ;
+  background-color: black;
+  color: white;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  font-weight: 600px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+.btn1:hover{
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+.btn2{
+    padding:15px 28px ;
+    background-color: orangered;
+    color: white;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    font-weight: 600px;
+    transition: 0.3s ease;
+    cursor: pointer;
+  }
+  .btn2:hover{
+    background-color: white;
+    color: orangered;
+  }
+.img-box img{
+    height:300px;
+    border-radius: 850px;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: orangered;
+}
+::-webkit-scrollbar-track{
+    border-color:rgba(0, 0, 0, 0.6) ;
+    width:20px ;
+}
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12% 8%;
+    gap:  10em;
+    background: black;
+}
+.about-img img{
+
+    position: relative ;
+    height: 300px;
+    box-shadow: 0 0 25px orangered
+               0 0 50px orangered;
+    border-radius: 50%;
+
+}
+.about-content h2{
+    text-align: left;
+    color: white;
+    font-size: 42px;
+}
+.about-content h3{
+    font-size: 50px;
+    color: white;
+
+}
+.about-content p{
+   color: white;
+   font-size: 20px;
+   margin: 2em 0 3em; 
+}
+.contact-form h2{
+    text-align: center;
+    margin-top:3em ;
+    margin-top: 1em;
+    font-size: 36px;
+    color: rgb(17, 226, 226);
+}
+.contact-form{
+    max-width: 50em;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3em;
+}
+.contact-form input{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.contact-form form .input-box input,
+.contact-form form textarea{
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 18px;
+    color:black ;
+    background: rgb(241,241,241);
+    border-radius:.8em;
+    margin: 1rem 0;
+    resize: none;
+
+}
+.footer{
+    position: relative;
+    bottom: 0;
+    padding: 40px 0;
+    width: 100%;
+    background-color: #8a8686;
+}
+.footer .social {
+    text-align: center;
+    padding: bottom 25px; 
+    color: white;
+}
+.footer .social a{
+    font-size: 24px;
+    color: white;
+    border: 2px solid rgb(0, 225, 255);
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    box-shadow: 0 0 10px rgb(0, 225, 255) , 0 0 10px orangered;
+    transition: 0.3s ease;
+  
+
+}
+footer .social a:hover{
+    transform: scale(1.2) translateY(-10px);
+    color: #00ffc8;
+    border:2px solid #00e1ff ;
+}
+.footer ul{
+   margin-top: 0;
+   padding: 0;
+   font-size: 18px;
+   margin-bottom: 0;
+   text-align: center;
+   
+}
+.footer ul li a{
+    color: white;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease;
+    
+}
+.footer ul li a:hover{
+    background-color: #a5acad;
+}
+.footer ul li{
+    display: inline-block;
+    padding: 0 15px;
+    padding-top: 10px;
+}
+.footer .copyright{
+    margin-top: 15px;
+    text-align: center;
+    font-size: 12px;
+    color: white;
+}   
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">
+            <span>Na</span>sim
+        </a>
+    <nav class="navbar">
+        <a href="#" class="active">Portfolio</a>
+        <a href="#">Services</a>
+        <a href="#">Experience</a>
+        <a href="#">Education</a>
+    </nav>
+    
+  <a href="#" class="contact">Contact Me </a>
+    </header>
+ 
+ <section class="home">
+    <div class="home-content">
+        <h3>Hi</h3>
+
+
+        <h1>I'm <span>Nasim</span> <br> a Frontent Developer</h1>
+
+        <p> Hello i am nasim . I m Fronten Web Developer & Desiner .
+            I Use HTML, CSS, JS & Bootstrap to do Web Development. 
+            And Use UI/UX Design to do Web Design
+            
+        </p>
+
+        <div class="btn-box">
+            <button class="btn1">Hire Me</button>
+            <button class="btn2">Experience</button>
+        </div>
+    </div>
+     <div class="img-box">
+        <img src="nasim.jpg" alt="" >
+     </div>
+ </section>
+
+ <section class="about">
+    <div class="about-img">
+        <img src="nasim.jpg" alt="" >
+    </div>
+    <div class="about-content">
+        <h2 class="heading">About <span>Me</span></h2>
+        <h3>Frontent <samp>Developer</samp></h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+         Alias, eveniet necessitatibus totam distinctio quam aliquam
+        exercitationem vero eius quia a! Libero expedita repellat
+         reprehenderit .</p>
+        <a href="#" class="btn2">Experience</a>
+    </div>
+ </section>
+  <section class="contact-form">
+    <h2 class="contact-me">Contact <samp>Me</samp></h2>
+
+   <form action="#">
+    <div class="input-box">
+        <input type="text" placeholder="Full Name">
+        <input type="email" placeholder="Email">
+    </div>
+    <div class="input-box">
+        <input type="number" placeholder="Phone Number">
+        <input type="text" aria-placeholder="Subject">
+    </div>
+    <textarea name="" id="" cols="30" rows="10" placeholder="Your Message">
+    </textarea>
+    <input type="submit" value="Send Message" class="btn1">
+   </form>
+  </section>
+  <footer class="footer">
+
+  <div class="social">
+   <a href="https://www.facebook.com/nsnasim.rithun" target="_blank"><i class='bx bxl-facebook-circle'></i></a>
+   <a href="https://www.instagram.com/md_nasim172?igsh=N2Z6OWh0ejc5MGpz" target="_blank"><i class='bx bxl-instagram'></i></a>
+   <a href="https://x.com/mdnasim11190?t=kBo_iTlOuW4WujUW-4o2tA&s=09" target="_blank"><i class='bx bxl-twitter'></i></a>
+   
+ 
+  </div>
+  <ul>
+    <li>
+        <a href="#">FAQ</a>
+    </li>
+    <li>
+        <a href="#">Services</a>
+    </li>
+    <li>
+        <a href="#">About Me</a>
+    </li>
+    <li>
+        <a href="#">Contact</a>
+    </li>
+    <li>
+        <a href="#">Privacy Policy </a>
+    </li>
+  </ul>
+
+  <p class="copyright"> &copy; 2024 Nasim | All Right Receve</p>
+ 
+  </footer>
+</body>
+</html>
